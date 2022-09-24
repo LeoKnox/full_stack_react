@@ -1,14 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import NavBar from './NavBar.js';
+import HomePage from './pages/HomePage.js';
+import AboutPage from './pages/AboutPage.js';
+import ArticlesListPage from './pages/ArticlesListPage.js';
+import ArticlePage from './pages/ArticlePage.js';
 
 function App() {
   return (
-    <div className="App">
-      <h1>My new app</h1>
-      <div id="page-body">
-        Welcome to my App
+    <BrowserRouter>
+      <div className="App">
+        <NavBar />
+        <h1>My new app</h1>
+        <div id="page-body">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/articles" element={<ArticlesListPage />} />
+            <Route path="/article/:articleId" element={<ArticlePage />} />
+          </Routes>
+        </div>
       </div>
-    </div>
+    </BrowserRouter>
   );
 }
 
