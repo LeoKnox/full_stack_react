@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const ArticlesList = ({ artciles }) => {
     return (
         <>
@@ -13,4 +15,4 @@ const ArticlesList = ({ artciles }) => {
     )
 }
 
-export default AticleList;
+export default ArticlesList;
