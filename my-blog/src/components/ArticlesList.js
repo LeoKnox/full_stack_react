@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-const ArticlesList = ({ artciles }) => {
+const ArticlesList = ({ articles }) => {
     return (
         <>
         {articles.map(article => (
